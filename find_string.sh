@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # 🔍 Demande à l'utilisateur le chemin du fichier à analyser
-read -p "📄 Entrez le chemin du fichier : " fichier
-
-
-# 📌 Vérifie si le fichier existe
+read fichier
 
     # 🔎 Demande la chaîne à rechercher dans le fichier
     read char
