@@ -1,7 +1,7 @@
 #!/bin/bash
 read char
 
-set --char
+set -- $char
 
 i=1
 
