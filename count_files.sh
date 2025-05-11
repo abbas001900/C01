@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # 🗂️ Ici nous demandons à l'utilisateur le nom d'un dossier
-read -p "📁 Entrez le nom du dossier : " myfolder
-echo "------------------------------------------"
+read -p "📁 Entrez le nom du dossier :" myfolder
 
 
 # 📌 Ici on érifie si le dossier existe
@@ -13,14 +12,12 @@ if [ -d "$myfolder" ]; then
 
     # ✅ Ici on vérifie si le dossier est vide
     if [ "$nbreItem" -eq 0 ]; then
-        echo "📂 Le dossier $myfolder est vide 0 fichier(s)."
+        echo "Le dossier $myfolder est vide 0 fichier(s)."
     else
-        echo "📂 Le dossier $myfolder contient $nbreItem fichier(s)."
+        echo "Le dossier $myfolder contient $nbreItem fichier(s)."
     fi
 else
     # ❌ Message d'erreur si le dossier n'existe pas
-    echo "❌ Le dossier $myfolder n'existe pas."
+    echo "Le dossier $myfolder n'existe pas."
 fi
-
-echo "------------------------------------------"
 exit 0
