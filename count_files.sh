@@ -5,7 +5,6 @@ read myfolder
 
 
 # 📌 Ici on érifie si le dossier existe
-if [ -d "$myfolder" ]; then
 
     # 📊 Ici Compte les éléments ordinaires dans le dossier
     nbreItem=$(ls "$myfolder" | wc -l)
@@ -16,8 +15,4 @@ if [ -d "$myfolder" ]; then
     else
         echo "Le dossier $myfolder contient 0 fichier(s)."
     fi
-else
-    # ❌ Message d'erreur si le dossier n'existe pas
-    echo "Le dossier $myfolder n'existe pas."
-fi
 exit 0
