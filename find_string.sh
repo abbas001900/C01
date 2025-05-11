@@ -5,7 +5,6 @@ read -p "📄 Entrez le chemin du fichier : " fichier
 
 
 # 📌 Vérifie si le fichier existe
-if [ -f "$fichier" ]; then
 
     # 🔎 Demande la chaîne à rechercher dans le fichier
     read char
