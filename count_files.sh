@@ -11,10 +11,10 @@ if [ -d "$myfolder" ]; then
     nbreItem=$(ls "$myfolder" | wc -l)
 
     # ✅ Ici on vérifie si le dossier est vide
-    if [ "$nbreItem" -eq 0 ]; then
-        echo "Le dossier $myfolder contient 0 fichier(s)."
-    else
+    if [ "$nbreItem" -gt 0 ]; then
         echo "Le dossier $myfolder contient $nbreItem fichier(s)."
+    else
+        echo "Le dossier $myfolder contient 0 fichier(s)."
     fi
 else
     # ❌ Message d'erreur si le dossier n'existe pas
