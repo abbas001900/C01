@@ -8,7 +8,7 @@ read myfolder
 if [ -d "$myfolder" ]; then
 
     # 📊 Ici Compte les éléments ordinaires dans le dossier
-    nbreItem=$(ls -1 "$myfolder" | wc -l)
+    nbreItem=$(ls "$myfolder" | wc -l)
 
     # ✅ Ici on vérifie si le dossier est vide
     if [ "$nbreItem" -eq 0 ]; then
