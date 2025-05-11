@@ -10,7 +10,7 @@ read char
 verification=$(grep "$char" "$fichier")
 
 # ✅ Si la chaîne est trouvée, afficher un message
-if [ ! -n "$verification" ]; then
-    echo "La chaîne '$char' n'a pas été trouvée dans le fichier $fichier."
+if [ $verification ]; then
+    echo "La chaîne '$char' n'a pas été trouvée dans $fichier."
 fi
 exit 0
