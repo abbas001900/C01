@@ -1,25 +1,14 @@
 #!/bin/bash
 
-# 🔍 Demande à l'utilisateur le chemin du fichier à analyser
+# Demander le nom du fichier
 read fichier
 
+# Demander la chaîne à rechercher
+read chaine
 
-# 📌 Vérifie si le fichier existe
-    # 🔎 Demande la chaîne à rechercher dans le fichier
-    read char
-
-    # 🧪 Recherche de la chaîne dans le fichier
-    verification=$(grep "$char" "$fichier")
-
-    # ✅ Si la chaîne est trouvée, afficher un message
-    if [ -n "$verification" ]; then
-        echo "La chaîne '$char' a été trouvée dans $fichier."
-    else
-        echo "La chaîne '$char' n'a pas été trouvée dans $fichier."
-    fi
-
+# Rechercher avec grep
+if grep -q "$chaine" "$fichier"; then
+    grep "$chaine" "$fichier"
 else
-    # ❗ Affiche une erreur si le fichier n'existe pas
-    echo "Le fichier $fichier n'existe pas."
+    echo "La chaîne '$chaine' n'a pas été trouvée dans $fichier."
 fi
-exit 0
