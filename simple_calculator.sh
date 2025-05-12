@@ -1,21 +1,27 @@
 #!/bin/bash
 
-read a
-read b
-read op
+read -p "Entrez le premier nombre : " nbre1
+read -p "Entrez le deuxième nombre : " nbre2
+read -p "Entrez l'opérateur (+, -, *, /) : " op
 
-if [ "$op" == "+" ]; then
-    echo "Résultat : $((a + b))"
-elif [ "$op" == "-" ]; then
-    echo "Résultat : $((a - b))"
-elif [ "$op" == "*" ]; then
-    echo "Résultat : $((a * b))"
-elif [ "$op" == "/" ]; then
-    if [ "$b" -eq 0 ]; then
-        echo "Erreur : division par zéro"
-    else
-        echo "Résultat : $((a / b))"
-    fi
-else
-    echo "Opérateur invalide"
-fi
+case "$op" in
+    "+")
+        echo "Résultat : $((nbre1 + nbre2))"
+        ;;
+    "-")
+        echo "Résultat : $((nbre1 - nbre2))"
+        ;;
+    "*")
+        echo "Résultat : $((nbre1 * nbre2))"
+        ;;
+    "/")
+        if [ "$nbre2" -eq 0 ]; then
+            echo "Erreur : division par zéro interdite"
+        else
+            echo "Résultat : $((nbre1 / nbre2))"
+        fi
+        ;;
+    *)
+        echo "Opérateur invalide. Utilisez +, -, * ou /"
+        ;;
+esac
