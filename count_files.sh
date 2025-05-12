@@ -1,26 +1,27 @@
 #!/bin/bash
-# 🐚 Script Bash pour vérifier le contenu d'un dossier
+# 🐚 Déclaration de l'interpréteur Bash
 
-# 🗂️ Demander à l'utilisateur le nom d'un dossier
+# 🗂️ Ici nous demandons à l'utilisateur le nom d'un dossier
 read myfolder
+# L'utilisateur saisit le nom d'un dossier qui est stocké dans la variable 'myfolder'
 
-# 📌 Vérifier si le dossier existe
+
+# 📌 Ici on érifie si le dossier existe
+# ⚠️ Il manque la vérification réelle ici (par exemple : if [ -d "$myfolder" ]; then)
+
 if [ -d "$myfolder" ]; then
+    # 📊 Ici Compte les éléments ordinaires dans le dossier
+    nbreItem=$(ls "$myfolder" | wc -l)
+    # 'ls' liste les fichiers du dossier, 'wc -l' compte le nombre de lignes (donc d'éléments)
 
-    # 📊 Compter les éléments (fichiers et sous-dossiers) dans le dossier
-    nbreItem=$(ls -A "$myfolder" | wc -l)
-    # Remarque : 'ls -A' ignore '.' et '..' (meilleur pour détecter un dossier vide)
-
-    # ✅ Vérifier si le dossier est vide ou non
+    # ✅ Ici on vérifie si le dossier est vide
     if [ "$nbreItem" -gt 0 ]; then
-        echo "Le dossier '$myfolder' contient $nbreItem fichier(s) ou élément(s)."
+        # Si le nombre d'éléments est supérieur à 0
+        echo "Le dossier $myfolder contient $nbreItem fichier(s)."
     else
-        echo "Le dossier '$myfolder' est vide."
+        # Sinon, le dossier est vide
+        echo "Le dossier $myfolder contient 0 fichier(s)."
     fi
-
 else
-    # ❌ Le dossier n'existe pas
-    echo "Erreur : le dossier '$myfolder' n'existe pas."
-fi
-
-exit 0
+    echo "Le dossier my folder n'exite pas"
+# Fin normale du script

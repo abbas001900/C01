@@ -34,4 +34,3 @@ case "$op" in
         echo "Opérateur invalide. Utilisez +, -, * ou /"
         ;;
 esac
-exit 0

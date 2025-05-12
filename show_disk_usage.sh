@@ -22,4 +22,3 @@ else
     echo "Espace disque principal OK."
     # Sinon, tout va bien
 fi
-exit 0

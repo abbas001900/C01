@@ -18,4 +18,3 @@ else
     echo "La chaîne '$chaine' n'a pas été trouvée dans $fichier."
     # Si la chaîne n'est pas trouvée, on affiche un message d'information
 fi
-exit 0

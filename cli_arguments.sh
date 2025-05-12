@@ -22,4 +22,4 @@ while [ $# -gt 0 ]; do
     i=$((i + 1))
     # Incrémente le compteur
 done
-exit 0
+
