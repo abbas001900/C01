@@ -21,7 +21,4 @@ case "$op" in
             echo "Résultat : $((nbre1 / nbre2))"
         fi
         ;;
-    *)
-        echo "Opérateur invalide. Utilisez +, -, * ou /"
-        ;;
 esac
