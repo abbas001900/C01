@@ -22,3 +22,5 @@ else
     echo "Espace disque principal OK."
     # Sinon, tout va bien
 fi
+# Fin normale du script
+exit 0

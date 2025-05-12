@@ -19,3 +19,4 @@ else
     echo "Le dossier $myfolder contient 0 fichier(s)."
 fi
 # Fin normale du script
+exit 0

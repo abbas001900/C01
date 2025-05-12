@@ -34,3 +34,5 @@ case "$op" in
         echo "Opérateur invalide. Utilisez +, -, * ou /"
         ;;
 esac
+# Fin normale du script
+exit 0
