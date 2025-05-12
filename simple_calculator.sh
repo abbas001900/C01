@@ -1,8 +1,8 @@
 #!/bin/bash
 
-read -p "Entrez le premier nombre: " a
-read -p "Entrez le premier nombre: " b
-read -p "Entrez le premier nombre: " op
+read a
+read b
+read op
 
 if [ "$op" = "+" ]; then
     echo "Résultat : $((a + b))"
