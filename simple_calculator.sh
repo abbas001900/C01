@@ -4,13 +4,13 @@ read a
 read b
 read op
 
-if [ "$op" = "+" ]; then
+if [ "$op" == "+" ]; then
     echo "Résultat : $((a + b))"
-elif [ "$op" = "-" ]; then
+elif [ "$op" == "-" ]; then
     echo "Résultat : $((a - b))"
-elif [ "$op" = "*" ]; then
+elif [ "$op" == "*" ]; then
     echo "Résultat : $((a * b))"
-elif [ "$op" = "/" ]; then
+elif [ "$op" == "/" ]; then
     if [ "$b" -eq 0 ]; then
         echo "Erreur : division par zéro"
     else
