@@ -1,8 +1,8 @@
 #!/bin/bash
 
-read -p "Entrez le premier nombre : " nbre1
-read -p "Entrez le deuxième nombre : " nbre2
-read -p "Entrez l'opérateur (+, -, *, /) : " op
+read nbre1
+read nbre2
+read op
 
 case "$op" in
     "+")
